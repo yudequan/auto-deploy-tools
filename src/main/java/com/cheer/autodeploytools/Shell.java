@@ -63,8 +63,11 @@ public class Shell
             channelExec.setCommand(command);
 
             channelExec.setInputStream(null);
+
+            String encoding = System.getProperty("file.encoding");
+
             BufferedReader input = new BufferedReader(new InputStreamReader
-                    (channelExec.getInputStream()));
+                    (channelExec.getInputStream(), encoding));
 
             channelExec.connect();
             // System.out.println("The remote command is :" + command);
