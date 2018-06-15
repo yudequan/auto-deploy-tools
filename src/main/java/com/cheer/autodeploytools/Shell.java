@@ -64,7 +64,7 @@ public class Shell
 
             channelExec.setInputStream(null);
 
-            String encoding = System.getProperty("file.encoding");
+            String encoding = System.getProperty("sun.jnu.encoding");
 
             BufferedReader input = new BufferedReader(new InputStreamReader
                     (channelExec.getInputStream(), encoding));
